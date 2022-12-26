@@ -25,11 +25,12 @@ const chapters = {
 
     ],
     location: {
-      center: [26.874490618227238, 90.49082737942794],
-      zoom: 12.7,
+      center: [90.48732307977042, 26.872462554684148],
+      zoom: 13.8,
       pitch: 60,
       bearing: 0.13,
-      duration: 5000
+      duration: 800,
+      essential: true
     },
   },
   land: {
@@ -56,11 +57,12 @@ const chapters = {
       },
     ],
     location: {
-      center: [27, 91],
-      zoom: 12.5,
+      center: [90.48732307977042, 26.872462554684148],
+      zoom: 13.5,
       pitch: 0,
+      essential: true,
       bearing: 0.13,
-      duration: 5000
+      duration: 800
     },
   },
 };

@@ -13,7 +13,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvLWRldiIsImEiOiJjbGJ4NjFrN2UxM3hiNDBueWhwa
 export default class Map extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       lat: 26.8725,
       lng: 90.4927,
@@ -38,6 +37,7 @@ export default class Map extends React.Component {
       maxZoom: 19,
       pitch: 60,
       bearing: 0.13,
+      essential: true
     });
 
     this.map.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -210,9 +210,8 @@ export default class Map extends React.Component {
         layout.forEach((data) => {
           this.map.setLayoutProperty(data.id, 'visibility', data.visibility);
         });
-       
-        this.map.easeTo({location});
-        this.map.flyTo({location})
+      
+        this.map.easeTo(location);
       }
       
     }
